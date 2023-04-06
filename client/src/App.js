@@ -10,12 +10,13 @@ function App() {
   return (
     <Router>
       <Layout />
+      <Sidebar/>
     <Routes>
        <Route path="/" element={<Homepage/>}/>
        <Route path="/product/:id" element={<ProductDetails />} />
        
     </Routes>
-    <Sidebar/>
+    
     <Footer/>
     </Router>
   );

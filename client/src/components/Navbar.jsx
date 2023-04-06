@@ -1,24 +1,23 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { SidebarContext } from '../contexts/SidebarContext';
+import {BsBag} from 'react-icons/bs';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
 
   const toggleNav = () => setIsOpen(!isOpen);
 
   return (
+    <div>
     <nav className="flex bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
+          <div  className="flex items-center">
             <Link to="/" className="flex-shrink-0 text-white">
               My Furniture
             </Link>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                
-              </div>
-            </div>
+            
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
@@ -102,6 +101,9 @@ function Navbar() {
         </div>
       </div>
     </nav>
+    <div className='cursor-pointer flex relative' onClick={() => setIsSidebarOpen(!isSidebarOpen)}><BsBag className='text-2xl'/></div>
+    </div>
+    
   );
 }
 

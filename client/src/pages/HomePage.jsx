@@ -6,7 +6,8 @@ const Homepage = () => {
   const { products } = useContext(ProductContext);
   // get only men's women's category
   const filteredProducts =products.filter( item => {
-    return  ( item.category === "men's clothing" || item.category === "women's clothing");
+    return (item);
+    // return  ( item.category === "men's clothing" || item.category === "women's clothing");
   });
   return (
     <div>
