@@ -1,16 +1,23 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./scenes/layout";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/HomePage";
+import ProductDetails from "./pages/ProductDetails";
+// import components
+import Sidebar from "./components/Sidebar";
+import Layout from "./scenes/layout";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
+      <Layout />
     <Routes>
-    <Route path='/' element={<Layout/>}>
        <Route path="/" element={<Homepage/>}/>
-    </Route>
+       <Route path="/product/:id" element={<ProductDetails />} />
+       
     </Routes>
-    </BrowserRouter>
+    <Sidebar/>
+    <Footer/>
+    </Router>
   );
 }
 

@@ -3,7 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@layer base {
+    body {
+      @apply font-primary text-primary;
+    }
+  }
 html,
 body,
 #root,
@@ -12,3 +16,4 @@ body,
     width: 100%;
     font-family: "Inter", sans-serif;
 }
+
