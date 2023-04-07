@@ -97,11 +97,12 @@ function Navbar() {
               aria-label="Main menu"
               aria-expanded="false"
             >Register</button>
+            <div className='cursor-pointer flex relative pl-10' onClick={() => setIsSidebarOpen(!isSidebarOpen)}><BsBag className='text-2xl text-white'/></div>
         </div>
         </div>
       </div>
     </nav>
-    <div className='cursor-pointer flex relative' onClick={() => setIsSidebarOpen(!isSidebarOpen)}><BsBag className='text-2xl'/></div>
+    
     </div>
     
   );
