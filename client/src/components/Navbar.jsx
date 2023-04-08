@@ -1,17 +1,23 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarContext } from '../contexts/SidebarContext';
 import {BsBag, BsFillPersonFill} from 'react-icons/bs';
 import { CartContext } from '../contexts/CartContext';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
 
   const toggleNav = () => setIsOpen(!isOpen);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.screenY > 60 ? setIsActive(true) : setIsActive(false);
+    });
+  }, []);
 
   return (
-    <div>
+    <div className={`${isActive ? 'bg-red-400' : 'bg-blue-400'} fixed w-full z-10 transition-all`}>
     <nav className="flex bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
