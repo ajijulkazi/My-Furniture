@@ -26,7 +26,7 @@ const removeFromCart = (id) => {
     setCart(newCart);
 }
     return (
-        <CartContext.Provider value={{ cart,addToCart, removeFromCart }}>
+        <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
             {children}
         </CartContext.Provider>
     );
