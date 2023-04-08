@@ -35,42 +35,106 @@ import { Link } from "react-router-dom";
     }
 
     return (
-        <div className="mt-4 grow flex items-center justify-around">
-            <div className="mb-32">
-                <h1 className="text-4xl text-center mb-4">Register</h1>
-                <form className="max-w-md mx-auto" onSubmit={registerUser}>
-                <input type="text" 
-                        placeholder="Your Name"  
-                        value={name} 
-                        onChange={ev => setName(ev.target.value)} />
-                <input type="email" 
-                        placeholder="your@email.com" 
-                        value={email} 
-                        onChange={ev => setEmail(ev.target.value)} />
-                <input type="password"
-                       placeholder= "password" 
-                       value={password} 
-                       onChange={ev => setPassword(ev.target.value)} />
-                <input type="text"
-                       placeholder= "location" 
-                       value={location} 
-                       onChange={ev => setLocation(ev.target.value)} />
-                <input type="text"
-                       placeholder= "phone" 
-                       value={phone} 
-                       onChange={ev => setPhone(ev.target.value)} />
-                <input type="text"
-                       placeholder= "occupation" 
-                       value={occupation} 
-                       onChange={ev => setOccupation(ev.target.value)} />
-                <button className="primary">Register</button>
-                <div className="text-center py-2 text-gray-500">
-                    Already a member?
-                    <Link className="underline text-black" to={'/login'}>Login</Link>
-                </div>
-            </form>
-            </div>
-            
+        <div class="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <h2 class="text-center text-3xl font-extrabold text-gray-900">
+      REGISTER
+    </h2>
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+      <form class="space-y-6" action="#" method="POST" onSubmit={registerUser}>
+      <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">
+            Name
+          </label>
+          <div class="mt-1">
+            <input id="name" name="name" type="text" autocomplete="name" required
+              class="appearance-none  w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={name} 
+              onChange={ev => setName(ev.target.value)}
+            />
+          </div>
         </div>
-    );
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">
+            Email address
+          </label>
+          <div class="mt-1">
+            <input id="email" name="email" type="email" autocomplete="email" required
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={email} 
+              onChange={ev => setEmail(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">
+            Password
+          </label>
+          <div class="mt-1">
+            <input id="password" name="password" type="password" autocomplete="current-password" required
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={password} 
+              onChange={ev => setPassword(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="phone" class="block text-sm font-medium text-gray-700">
+            phone
+          </label>
+          <div class="mt-1">
+            <input id="phone" name="phone" type="text" autocomplete="" required
+              class="appearance-none  w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={phone} 
+              onChange={ev => setPhone(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="location" class="block text-sm font-medium text-gray-700">
+            Location
+          </label>
+          <div class="mt-1">
+            <input id="location" name="name" type="text" autocomplete="" required
+              class="appearance-none  w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={location} 
+              onChange={ev => setLocation(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="occupation" class="block text-sm font-medium text-gray-700">
+            Occupation
+          </label>
+          <div class="mt-1">
+            <input id="occupation" name="name" type="text" autocomplete="" required
+              class="appearance-none  w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              value={occupation} 
+              onChange={ev => setOccupation(ev.target.value)}
+            />
+          </div>
+        </div>
+
+        <div>
+          <button type="submit"
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            register
+          </button>
+        </div>
+        <div className="text-center py-2 text-gray-500">
+            Already have an account ?
+            <Link className="underline text-black" to={'/login'}>Login</Link>
+        </div>
+      </form>
+      </div>
+      </div>
+      </div>
+           );
 }
