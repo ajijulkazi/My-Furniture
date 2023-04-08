@@ -2,9 +2,11 @@ import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarContext } from '../contexts/SidebarContext';
 import {BsBag, BsFillPersonFill} from 'react-icons/bs';
+import { CartContext } from '../contexts/CartContext';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
+  const { itemAmount } = useContext(CartContext);
 
   const toggleNav = () => setIsOpen(!isOpen);
 
@@ -87,9 +89,15 @@ function Navbar() {
                 <Link to="/login">
                 <BsFillPersonFill className='text-2xl text-amber-100 items-center justify-center' />
                 </Link>
-                <Link className='cursor-pointer flex relative pl-5' onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-                  <BsBag className='text-2xl text-white'/>
-                </Link>
+                <div
+                  onClick={toggleNav}
+                  className='cursor-pointer  flex relative max-w-[50px] pl-2'
+                >
+                
+                  <BsBag onClick={() => setIsSidebarOpen(!isSidebarOpen)} className='text-2xl text-white'/>
+                
+                <div className=' bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center'>{itemAmount}</div>
+                </div>
 
             {/* <div className='cursor-pointer flex relative pl-5' onClick={() => setIsSidebarOpen(!isSidebarOpen)}><BsBag className='text-2xl text-white'/></div> */}
         </div>
