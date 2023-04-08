@@ -9,6 +9,8 @@ import ProductsPage from "./pages/ProductsPage";
 import BookingForm from "./pages/BookingFormPage";
 import About from "./pages/AboutPage";
 import ContactForm from "./pages/ContactFormPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Sidebar/>
     <Routes>
        <Route path="/" element={<Homepage/>}/>
+       <Route path="/login" element={<LoginPage/>}/>
+       <Route path="/register" element={<RegisterPage/>}/>
        <Route path="/products" element={<ProductsPage/>} />
        <Route path="/product/:id" element={<ProductDetails />} />
        <Route path="/booking" element={<BookingForm/>} />

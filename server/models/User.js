@@ -19,10 +19,6 @@ const userSchema = new mongoose.Schema(
             required: true,
             min:5,
         },
-        picturePath:{
-            type: String,
-            default: "",
-        },
         location: String,
         phone: String,
         occupation: String

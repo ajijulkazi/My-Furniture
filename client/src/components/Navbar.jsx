@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SidebarContext } from '../contexts/SidebarContext';
-import {BsBag} from 'react-icons/bs';
+import {BsBag, BsFillPersonFill} from 'react-icons/bs';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
@@ -84,7 +84,11 @@ function Navbar() {
                 >
                   Contact
                 </Link>
-            <button
+                <Link to="/login">
+                <BsFillPersonFill className='text-2xl text-amber-100 items-center justify-center' />
+                </Link>
+                
+            {/* <button
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
               aria-label="Main menu"
@@ -96,8 +100,8 @@ function Navbar() {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
               aria-label="Main menu"
               aria-expanded="false"
-            >Register</button>
-            <div className='cursor-pointer flex relative pl-10' onClick={() => setIsSidebarOpen(!isSidebarOpen)}><BsBag className='text-2xl text-white'/></div>
+            >Register</button> */}
+            <div className='cursor-pointer flex relative pl-5' onClick={() => setIsSidebarOpen(!isSidebarOpen)}><BsBag className='text-2xl text-white'/></div>
         </div>
         </div>
       </div>
