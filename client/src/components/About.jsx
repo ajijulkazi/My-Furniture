@@ -6,7 +6,7 @@ const About = ({ product }) => {
   
     // return  ( item.category === "men's clothing" || item.category === "women's clothing");
   
-    const { id, image, price} = product;
+    // const { id, image, price} = product;
     
   return (
     <div className="flex flex-col min-h-screen">
@@ -33,7 +33,7 @@ const About = ({ product }) => {
               
                 <img
                     className="h-48 w-full object-cover"
-                    src={image}
+                    src=''
                     alt="Product 1"
               />
              
@@ -43,8 +43,8 @@ const About = ({ product }) => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam eget elit eu eros blandit accumsan.
                 </p>
-                <p className="text-gray-700 font-bold">${price}</p>
-                <button onClick={() => addToCart(product,id)} className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
+                <p className="text-gray-700 font-bold">$000</p>
+                <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
                   Add to Cart
                 </button>
               </div>
@@ -52,7 +52,7 @@ const About = ({ product }) => {
             <div className="bg-white shadow rounded-lg overflow-hidden">
               <img
                 className="h-48 w-full object-cover"
-                src={image}
+                src='$000'
                 alt="Product 1"
               />
               <div className="p-4">
@@ -61,8 +61,8 @@ const About = ({ product }) => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam eget elit eu eros blandit accumsan.
                 </p>
-                <p className="text-gray-700 font-bold">${price}</p>
-                <button onClick={() => addToCart(product,id)} className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
+                <p className="text-gray-700 font-bold">$000</p>
+                <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
                   Add to Cart
                 </button>
               </div>
@@ -70,7 +70,7 @@ const About = ({ product }) => {
             <div className="bg-white shadow rounded-lg overflow-hidden">
               <img
                 className="h-48 w-full object-cover"
-                src={image}
+                src=''
                 alt="Product 2"
               />
               <div className="p-4">
@@ -79,8 +79,8 @@ const About = ({ product }) => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam eget elit eu eros blandit accumsan.
                 </p>
-                <p className="text-gray-700 font-bold">${price}</p>
-                <button onClick={() => addToCart(product,id)} className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
+                <p className="text-gray-700 font-bold">$000</p>
+                <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
                   Add to Cart
                 </button>
               </div>

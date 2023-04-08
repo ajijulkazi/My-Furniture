@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <div>
     <nav className="flex bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div  className="flex items-center">
             <Link to="/" className="flex-shrink-0 text-white">
@@ -87,7 +87,11 @@ function Navbar() {
                 <Link to="/login">
                 <BsFillPersonFill className='text-2xl text-amber-100 items-center justify-center' />
                 </Link>
-            <div className='cursor-pointer flex relative pl-5' onClick={() => setIsSidebarOpen(!isSidebarOpen)}><BsBag className='text-2xl text-white'/></div>
+                <Link className='cursor-pointer flex relative pl-5' onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                  <BsBag className='text-2xl text-white'/>
+                </Link>
+
+            {/* <div className='cursor-pointer flex relative pl-5' onClick={() => setIsSidebarOpen(!isSidebarOpen)}><BsBag className='text-2xl text-white'/></div> */}
         </div>
         </div>
       </div>
