@@ -1,13 +1,9 @@
-import React, { useContext } from "react";
-import { CartContext } from '../contexts/CartContext';
+import productImg1 from '../img/product1.jpg';
+import productImg2 from '../img/product2.jpg';
+import productImg3 from '../img/product3.jpg';
+import { Link } from "react-router-dom";
 
-const About = ({ product }) => {
-  const { addToCart } = useContext(CartContext);  
-  
-    // return  ( item.category === "men's clothing" || item.category === "women's clothing");
-  
-    // const { id, image, price} = product;
-    
+const About = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="flex-1">
@@ -33,7 +29,7 @@ const About = ({ product }) => {
               
                 <img
                     className="h-48 w-full object-cover"
-                    src=''
+                    src={productImg1}
                     alt="Product 1"
               />
              
@@ -43,17 +39,19 @@ const About = ({ product }) => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam eget elit eu eros blandit accumsan.
                 </p>
-                <p className="text-gray-700 font-bold">$000</p>
-                <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
-                  Add to Cart
-                </button>
+                <p className="text-gray-700 font-bold">$1000</p>
+                <Link to="/">
+                  <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="bg-white shadow rounded-lg overflow-hidden">
               <img
                 className="h-48 w-full object-cover"
-                src='$000'
-                alt="Product 1"
+                src={productImg2}
+                alt="Product 2"
               />
               <div className="p-4">
                 <h3 className="font-bold text-gray-900 mb-2">Product 2</h3>
@@ -61,17 +59,19 @@ const About = ({ product }) => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam eget elit eu eros blandit accumsan.
                 </p>
-                <p className="text-gray-700 font-bold">$000</p>
-                <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
-                  Add to Cart
-                </button>
+                <p className="text-gray-700 font-bold">$1000</p>
+                <Link to="/">
+                  <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="bg-white shadow rounded-lg overflow-hidden">
               <img
                 className="h-48 w-full object-cover"
-                src=''
-                alt="Product 2"
+                src={productImg3}
+                alt="Product 3"
               />
               <div className="p-4">
                 <h3 className="font-bold text-gray-900 mb-2">Product 3</h3>
@@ -79,10 +79,12 @@ const About = ({ product }) => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Nullam eget elit eu eros blandit accumsan.
                 </p>
-                <p className="text-gray-700 font-bold">$000</p>
-                <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
-                  Add to Cart
-                </button>
+                <p className="text-gray-700 font-bold">$1000</p>
+                <Link to="/">
+                  <button  className="bg-gray-900 text-white py-2 px-4 mt-4 rounded hover:bg-gray-800">
+                    Add to Cart
+                  </button>
+                </Link>
               </div>
             </div>
             </div>

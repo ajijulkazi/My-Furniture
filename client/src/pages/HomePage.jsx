@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { ProductContext } from '../contexts/ProductContext';
 import Product from '../components/Product';
 import About from '../components/About';
-import Banner from '../components/Banner';
 import ContactForm from './ContactFormPage';
+import BannerSlider from '../components/Banner';
 const Homepage = () => {
   // get products from product context
   const { products } = useContext(ProductContext);
@@ -14,7 +14,7 @@ const Homepage = () => {
   });
   return (
     <div>
-      <Banner/>
+      <BannerSlider/>
       <section className='py-20'>
         <div ><h1 className=' text-center pl-100 mb-4 font-semibold text-2xl'>Find Your Products</h1></div>
         <div className="container mx-auto">

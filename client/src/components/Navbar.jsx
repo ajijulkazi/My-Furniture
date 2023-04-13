@@ -17,8 +17,8 @@ function Navbar() {
   }, []);
 
   return (
-    <div className={`${isActive ? 'bg-red-400' : 'bg-blue-400'} fixed w-full z-10 transition-all`}>
-    <nav className="flex bg-gray-800">
+    <header className={`${isActive ? ' bg-white shadow-md' : 'bg-none'}  w-full z-10 transition-all`}>
+    <nav className="flex bg-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div  className="flex items-center">
@@ -111,7 +111,7 @@ function Navbar() {
       </div>
     </nav>
     
-    </div>
+    </header>
     
   );
 }
