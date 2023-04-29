@@ -5,20 +5,28 @@ import {BsBag, BsFillPersonFill} from 'react-icons/bs';
 import { CartContext } from '../contexts/CartContext';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isActive, setIsActive] = useState(false);
   const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
+  const [stickyClass, setStickyClass] = useState('');
 
-  const toggleNav = () => setIsOpen(!isOpen);
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      window.screenY > 60 ? setIsActive(true) : setIsActive(false);
-    });
+    window.addEventListener('scroll', stickNavbar);
+    return () => window.removeEventListener('scroll', stickNavbar);
   }, []);
 
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 150 ? setStickyClass('sticky-nav') : setStickyClass('');
+    }
+  };
+
+  const toggleNav = () => setIsOpen(!isOpen);
+     
+
   return (
-    <header className={`${isActive ? ' bg-white shadow-md' : 'bg-none'}  w-full z-10 transition-all`}>
-    <nav className="flex bg-gray-700">
+    <header className={`navbar ${stickyClass}`}>
+    <nav className="flex bg-gray-700"> 
       <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div  className="flex items-center">

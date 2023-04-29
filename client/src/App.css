@@ -174,3 +174,17 @@
   a svg{
     height: 20px;
   }
+  /* Navbar Scroll fixed */
+  .navbar {
+    position: relative;
+    z-index: 999;
+    height: 62px;
+    width: 100%;
+    background-color: #ccc;
+  }
+  
+  .sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
